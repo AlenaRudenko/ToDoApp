@@ -13,8 +13,9 @@ code {
 }
 .Container {
   max-width: 1243px;
-  background-color: #6A5ACD;
+  background-color: #cec8ef;
   margin: auto;
+  height: 100vh;
 }
 .Header {
   padding: 10px 40px;
@@ -29,7 +30,7 @@ code {
 .Header__button {
   display: flex;
   color:white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
 }
 .Header__item1 {
@@ -38,14 +39,13 @@ code {
 .Header__item1:hover {
   cursor: pointer;
 }
-.Header__item2:hover{
-  cursor: pointer;
-}
+/* главная страница */
 .Main {
   padding: 10px 5px;
   font-family: "Roboto";
   color:#696969;
 }
+/* группа таска */
 .Main__item {
   display: flex;
   justify-content: space-between;
@@ -54,12 +54,38 @@ code {
   padding: 10px 10px;
   border-radius: 30px;
 }
+/* один таск */
 .Main__group {
   display: flex;
   flex-direction: row;
   align-items:center;
   justify-content: center;
 }
+/* текст в таске */
 .Main__task {
   margin-left: 10px;
+}
+.Main--taskchecked {
+  text-decoration:line-through;
+}
+/* чекпоинт в таске */
+.Main__point {
+  width: 15px;
+  height: 15px;
+  border: 1px solid 	#909090;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Main--pointchecked {
+  background-color: #c8a2c8;
+  border:1px solid white;
+}
+.Main__point:active {
+  border:none;
+  background-color: #c8a2c8;
+  border:1px solid white;
+}
+/* избранное */
+.Main__fav {
+  cursor: pointer;
 }
