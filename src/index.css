@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.Container {
+  max-width: 1243px;
+  background-color: #6A5ACD;
+  margin: auto;
+}
+.Header {
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header__logo {
+  color:white;
+  font-family: 'Roboto';
+}
+.Header__button {
+  display: flex;
+  color:white;
+  font-size: 30px;
+  font-weight: 700;
+}
+.Header__item1 {
+  margin-right: 10px;
+}
+.Header__item1:hover {
+  cursor: pointer;
+}
+.Header__item2:hover{
+  cursor: pointer;
+}
+.Main {
+  padding: 10px 5px;
+  font-family: "Roboto";
+  color:#696969;
+}
+.Main__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 30px;
+}
+.Main__group {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+}
+.Main__task {
+  margin-left: 10px;
+}
