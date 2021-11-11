@@ -1,21 +1,20 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 .Container {
-  max-width: 1243px;
-  background-color: #EAECF0;
-  margin: auto;
+  background-color: #eaecf0;
   height: 100vh;
+  margin: auto;
   position: relative;
 }
 
@@ -25,27 +24,24 @@ code {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top:20px;
-  left:0;
-
+  top: 20px;
+  left: 0;
 }
 .header__container {
   width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items:center;
-  border-radius:30px;
-  box-shadow:  1px -1px 2px #C4C9DC,
-             -1px 1px 2px #ffffff;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 1px -1px 2px #c4c9dc, -1px 1px 2px #ffffff;
 }
 .Header__logo {
-  color:#455B74;
-  font-family: 'Montserrat';
+  color: #455b74;
+  font-family: "Montserrat";
   font-weight: 700;
   margin-left: 20px;
-  text-shadow: 2px -3px 2px #C4C9DC,
-  -2px 3px 2px #ffffff;;
+  text-shadow: 2px -3px 2px #c4c9dc, -2px 3px 2px #ffffff;
 }
 .Header__button {
   margin-right: 30px;
@@ -60,107 +56,45 @@ code {
 .Main {
   width: 100%;
   font-family: "Montserrat";
-  color:#455B74;
+  color: #455b74;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top:20%;
-  left:0;
+  top: 20%;
+  left: 0;
 }
-/* группа таска */
-.Main__item {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding: 10px 10px;
-  border-radius: 30px;
-  background: #EAECF0;
-  box-shadow:  4px -3px 4px #C4C9DC,
-             -4px 3px 4px #ffffff;
-}
-/* один таск */
-.Main__group {
-  display: flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content: center;
 
-}
-/* текст в таске */
-.Main__task {
-  margin-left: 10px;
-}
-.Main--taskchecked {
-  text-decoration:line-through;
-}
-/* чекпоинт в таске */
-.Main__point {
-  width: 25px;
-  height: 25px;
-  /* border: 0.5px solid 	#909090; */
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  box-shadow:  1px -1px 1px #C4C9DC,
-             -1px 1px 1px #ffffff;
-
-}
-.Main--pointchecked {
-  /* background-color: #ace1af; */
-  /* border:0.5px solid white; */
-  box-shadow:inset 1px -1px 1px #C4C9DC,
-             inset -1px 1px 1px #ffffff;
-}
-.Main__point:active {
-  border:none;
-  /* border:0.5px solid white; */
-  box-shadow:inset 1px -1px 1px #C4C9DC,
-             inset -1px 1px 1px #ffffff;
-}
-/* избранное */
-.Main__fav {
-  cursor: pointer;
-}
 button {
   border: none;
-  color: #455B74;
+  color: #455b74;
   padding: 0.5em 0.8em;
   font-size: 18px;
   border-radius: 50%;
   border: 0.5px solid #e8e8e8;
-  transition: all .3s;
-  box-shadow:  6px -3px 6px #C4C9DC,
-             -6px 3px 6px #ffffff;
- }
- 
- button:hover {
-  box-shadow:  -6px 3px 6px #C4C9DC,
-             6px -3px 6px #ffffff;
- }
- 
- button:active {
-  box-shadow:inset -6px 3px 6px #C4C9DC,
-             inset 6px -3px 6px #ffffff;
- }
+  transition: all 0.3s;
+  box-shadow: 6px -3px 6px #c4c9dc, -6px 3px 6px #ffffff;
+}
 
- input {
-   display: none;
-   font-family: "Montserrat";
-   color:#989898;
-   outline: none;
-   text-decoration: none;
-   border:none;
-   padding: 10px 5px;
-   box-shadow:inset -2px 2px 2px #C4C9DC,
-             inset 2px -2px 2px #ffffff;
+button:hover {
+  box-shadow: -6px 3px 6px #c4c9dc, 6px -3px 6px #ffffff;
+}
+
+button:active {
+  box-shadow: inset -6px 3px 6px #c4c9dc, inset 6px -3px 6px #ffffff;
+}
+
+input {
+  display: none;
+  font-family: "Montserrat";
+  color: #989898;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  padding: 10px 5px;
+  box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;
   border-radius: 30px;
- }
- .star {
-  box-shadow:inset -2px 2px 2px #C4C9DC,
-  inset 2px -2px 2px #ffffff;
- }
+}
+.star {
+  box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;
+}

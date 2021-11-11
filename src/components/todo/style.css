@@ -1,0 +1,52 @@
+/* группа таска */
+.Main__item {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 30px;
+  background: #eaecf0;
+  box-shadow: 4px -3px 4px #c4c9dc, -4px 3px 4px #ffffff;
+}
+/* один таск */
+.Main__group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* текст в таске */
+.Main__task {
+  margin-left: 10px;
+}
+.Main--taskchecked {
+  text-decoration: line-through;
+}
+/* чекпоинт в таске */
+.Main__point {
+  width: 25px;
+  height: 25px;
+  /* border: 0.5px solid 	#909090; */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px -1px 1px #c4c9dc, -1px 1px 1px #ffffff;
+}
+.Main--pointchecked {
+  /* background-color: #ace1af; */
+  /* border:0.5px solid white; */
+  box-shadow: inset 1px -1px 1px #c4c9dc, inset -1px 1px 1px #ffffff;
+}
+.Main__point:active {
+  border: none;
+  /* border:0.5px solid white; */
+  box-shadow: inset 1px -1px 1px #c4c9dc, inset -1px 1px 1px #ffffff;
+}
+/* избранное */
+.Main__fav {
+  cursor: pointer;
+}
