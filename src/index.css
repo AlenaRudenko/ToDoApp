@@ -13,25 +13,40 @@ code {
 }
 .Container {
   max-width: 1243px;
-  background-color: #cec8ef;
+  background-color: #e0e0e0;
   margin: auto;
   height: 100vh;
+  position: relative;
 }
+
 .Header {
-  padding: 10px 40px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: absolute;
+  top:20px;
+  left:0;
+
+}
+.header__container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  border-radius:30px;
+  box-shadow:  6px -3px 6px #afafaf,
+             -6px 3px 6px #ffffff;
 }
 .Header__logo {
-  color:white;
-  font-family: 'Roboto';
+  color:#989898;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  margin-left: 20px;
 }
 .Header__button {
-  display: flex;
-  color:white;
-  font-size: 40px;
-  font-weight: 700;
+  margin-right: 30px;
 }
 .Header__item1 {
   margin-right: 10px;
@@ -41,18 +56,29 @@ code {
 }
 /* главная страница */
 .Main {
-  padding: 10px 5px;
-  font-family: "Roboto";
-  color:#696969;
+
+  width: 100%;
+  font-family: "Montserrat";
+  color:black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:20%;
+  left:0;
 }
 /* группа таска */
 .Main__item {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   background-color: #fff;
   margin-bottom: 10px;
   padding: 10px 10px;
   border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow:  6px -3px 6px #afafaf,
+             -6px 3px 6px #ffffff;
 }
 /* один таск */
 .Main__group {
@@ -60,6 +86,7 @@ code {
   flex-direction: row;
   align-items:center;
   justify-content: center;
+
 }
 /* текст в таске */
 .Main__task {
@@ -70,22 +97,65 @@ code {
 }
 /* чекпоинт в таске */
 .Main__point {
-  width: 15px;
-  height: 15px;
-  border: 1px solid 	#909090;
+  width: 25px;
+  height: 25px;
+  /* border: 0.5px solid 	#909090; */
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  box-shadow:  1px -1px 1px #afafaf,
+             -1px 1px 1px #ffffff;
+
 }
 .Main--pointchecked {
-  background-color: #c8a2c8;
-  border:1px solid white;
+  /* background-color: #ace1af; */
+  /* border:0.5px solid white; */
+  box-shadow:inset 1px -1px 1px #afafaf,
+             inset -1px 1px 1px #ffffff;
 }
 .Main__point:active {
   border:none;
-  background-color: #c8a2c8;
-  border:1px solid white;
+  /* border:0.5px solid white; */
+  box-shadow:inset 1px -1px 1px #afafaf,
+             inset -1px 1px 1px #ffffff;
 }
 /* избранное */
 .Main__fav {
   cursor: pointer;
 }
+button {
+  border: none;
+  color: #090909;
+  padding: 0.5em 0.8em;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: 0.5px solid #e8e8e8;
+  transition: all .3s;
+  box-shadow:  6px -3px 6px #afafaf,
+             -6px 3px 6px #ffffff;
+ }
+ 
+ button:hover {
+  box-shadow:  -6px 3px 6px #afafaf,
+             6px -3px 6px #ffffff;
+ }
+ 
+ button:active {
+  box-shadow:inset -6px 3px 6px #afafaf,
+             inset 6px -3px 6px #ffffff;
+ }
+
+ input {
+   font-family: "Montserrat";
+   color:#989898;
+   outline: none;
+   text-decoration: none;
+   border:none;
+   padding: 10px 5px;
+   box-shadow:inset -2px 2px 2px #afafaf,
+             inset 2px -2px 2px #ffffff;
+  border-radius: 30px;
+ }

@@ -5,17 +5,21 @@ function App() {
     <div className='App'>
       <div className="Container">
         <div className="Header">
-          <h1 className="Header__logo">ToDo App</h1>
-          <div className="Header__button">
-            <div class="Header__item1">+</div>
-          </div>
+          <div className="header__container">
+            <h1 className="Header__logo">ToDo App</h1>
+            <div className="Header__search">
+              <input type="search" className="Header__placesearch"></input>
+            </div>
+            <div className="Header__button">
+              <button>+</button>
+            </div>
+          </div> 
         </div>
-      </div>
-      <div className='Container Container--main'>
         <div className='Main'>
           <div className='Main__item'>
             <div className="Main__group">
               <div className="Main__point Main--pointchecked">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 109.76" width="15px" heigh="15px" fill="#acacac"><defs><style>.cls-1</style></defs><title>red-check-mark</title><path class="cls-1" d="M0,52.88l22.68-.3A84.1,84.1,0,0,1,46,72.44,314.13,314.13,0,0,1,105.6,0h17.28A522.93,522.93,0,0,0,46.77,109.76C36,86.69,21,67.27,0,52.88Z"/></svg>
               </div>
               <div className="Main__task Main--taskchecked">Have breakfast</div>
             </div>
@@ -24,7 +28,7 @@ function App() {
               width="25px" height="25px" viewBox="0 0 1280.000000 1221.000000"
               preserveAspectRatio="xMidYMid meet">
               <g transform="translate(0.000000,1221.000000) scale(0.100000,-0.100000)"
-              fill="gold" stroke="gold" stroke-width="50%">
+              fill="#fdfd96" stroke="#fdfd96" stroke-width="50%">
               <path d="M6307 12196 c-98 -36 -178 -122 -275 -295 -116 -207 -394 -714 -756
               -1380 -532 -976 -792 -1442 -1071 -1916 l-47 -81 -971 -183 c-535 -101 -1262
               -239 -1617 -307 -355 -68 -742 -139 -861 -158 -343 -55 -495 -100 -595 -174
@@ -58,7 +62,7 @@ function App() {
               Created by potrace 1.15, written by Peter Selinger 2001-2017
               </metadata>
               <g transform="translate(0.000000,1221.000000) scale(0.100000,-0.100000)"
-              fill="none" stroke="gold" stroke-width="50%">
+              fill="none" stroke="#fdfd96" stroke-width="50%">
               <path d="M6307 12196 c-98 -36 -178 -122 -275 -295 -116 -207 -394 -714 -756
               -1380 -532 -976 -792 -1442 -1071 -1916 l-47 -81 -971 -183 c-535 -101 -1262
               -239 -1617 -307 -355 -68 -742 -139 -861 -158 -343 -55 -495 -100 -595 -174
@@ -94,7 +98,7 @@ function App() {
               Created by potrace 1.15, written by Peter Selinger 2001-2017
               </metadata>
               <g transform="translate(0.000000,1221.000000) scale(0.100000,-0.100000)"
-              fill="none" stroke="gold" stroke-width="50%">
+              fill="none" stroke="#fdfd96" stroke-width="50%">
               <path d="M6307 12196 c-98 -36 -178 -122 -275 -295 -116 -207 -394 -714 -756
               -1380 -532 -976 -792 -1442 -1071 -1916 l-47 -81 -971 -183 c-535 -101 -1262
               -239 -1617 -307 -355 -68 -742 -139 -861 -158 -343 -55 -495 -100 -595 -174
@@ -130,7 +134,7 @@ function App() {
               Created by potrace 1.15, written by Peter Selinger 2001-2017
               </metadata>
               <g transform="translate(0.000000,1221.000000) scale(0.100000,-0.100000)"
-              fill="none" stroke="gold" stroke-width="50%">
+              fill="none" stroke="#fdfd96" stroke-width="50%">
               <path d="M6307 12196 c-98 -36 -178 -122 -275 -295 -116 -207 -394 -714 -756
               -1380 -532 -976 -792 -1442 -1071 -1916 l-47 -81 -971 -183 c-535 -101 -1262
               -239 -1617 -307 -355 -68 -742 -139 -861 -158 -343 -55 -495 -100 -595 -174
