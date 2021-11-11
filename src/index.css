@@ -13,7 +13,7 @@ code {
 }
 .Container {
   max-width: 1243px;
-  background-color: #e0e0e0;
+  background-color: #EAECF0;
   margin: auto;
   height: 100vh;
   position: relative;
@@ -36,14 +36,16 @@ code {
   justify-content: space-between;
   align-items:center;
   border-radius:30px;
-  box-shadow:  6px -3px 6px #afafaf,
-             -6px 3px 6px #ffffff;
+  box-shadow:  1px -1px 2px #C4C9DC,
+             -1px 1px 2px #ffffff;
 }
 .Header__logo {
-  color:#989898;
+  color:#455B74;
   font-family: 'Montserrat';
   font-weight: 700;
   margin-left: 20px;
+  text-shadow: 2px -3px 2px #C4C9DC,
+  -2px 3px 2px #ffffff;;
 }
 .Header__button {
   margin-right: 30px;
@@ -56,10 +58,9 @@ code {
 }
 /* главная страница */
 .Main {
-
   width: 100%;
   font-family: "Montserrat";
-  color:black;
+  color:#455B74;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,9 +77,9 @@ code {
   margin-bottom: 10px;
   padding: 10px 10px;
   border-radius: 30px;
-  background: #e0e0e0;
-  box-shadow:  6px -3px 6px #afafaf,
-             -6px 3px 6px #ffffff;
+  background: #EAECF0;
+  box-shadow:  4px -3px 4px #C4C9DC,
+             -4px 3px 4px #ffffff;
 }
 /* один таск */
 .Main__group {
@@ -105,20 +106,20 @@ code {
   display: flex;
   align-items:center;
   justify-content: center;
-  box-shadow:  1px -1px 1px #afafaf,
+  box-shadow:  1px -1px 1px #C4C9DC,
              -1px 1px 1px #ffffff;
 
 }
 .Main--pointchecked {
   /* background-color: #ace1af; */
   /* border:0.5px solid white; */
-  box-shadow:inset 1px -1px 1px #afafaf,
+  box-shadow:inset 1px -1px 1px #C4C9DC,
              inset -1px 1px 1px #ffffff;
 }
 .Main__point:active {
   border:none;
   /* border:0.5px solid white; */
-  box-shadow:inset 1px -1px 1px #afafaf,
+  box-shadow:inset 1px -1px 1px #C4C9DC,
              inset -1px 1px 1px #ffffff;
 }
 /* избранное */
@@ -127,35 +128,39 @@ code {
 }
 button {
   border: none;
-  color: #090909;
+  color: #455B74;
   padding: 0.5em 0.8em;
   font-size: 18px;
   border-radius: 50%;
-  background: #f5f5f5;
   border: 0.5px solid #e8e8e8;
   transition: all .3s;
-  box-shadow:  6px -3px 6px #afafaf,
+  box-shadow:  6px -3px 6px #C4C9DC,
              -6px 3px 6px #ffffff;
  }
  
  button:hover {
-  box-shadow:  -6px 3px 6px #afafaf,
+  box-shadow:  -6px 3px 6px #C4C9DC,
              6px -3px 6px #ffffff;
  }
  
  button:active {
-  box-shadow:inset -6px 3px 6px #afafaf,
+  box-shadow:inset -6px 3px 6px #C4C9DC,
              inset 6px -3px 6px #ffffff;
  }
 
  input {
+   display: none;
    font-family: "Montserrat";
    color:#989898;
    outline: none;
    text-decoration: none;
    border:none;
    padding: 10px 5px;
-   box-shadow:inset -2px 2px 2px #afafaf,
+   box-shadow:inset -2px 2px 2px #C4C9DC,
              inset 2px -2px 2px #ffffff;
   border-radius: 30px;
+ }
+ .star {
+  box-shadow:inset -2px 2px 2px #C4C9DC,
+  inset 2px -2px 2px #ffffff;
  }
