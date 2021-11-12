@@ -11,14 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.Container {
+.container {
   background-color: #eaecf0;
   height: 100vh;
   margin: auto;
   position: relative;
 }
 
-.Header {
+.header {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -36,24 +36,24 @@ code {
   border-radius: 30px;
   box-shadow: 1px -1px 2px #c4c9dc, -1px 1px 2px #ffffff;
 }
-.Header__logo {
+.header__logo {
   color: #455b74;
   font-family: "Montserrat";
   font-weight: 700;
   margin-left: 20px;
   text-shadow: 2px -3px 2px #c4c9dc, -2px 3px 2px #ffffff;
 }
-.Header__button {
+.header__button {
   margin-right: 30px;
 }
-.Header__item1 {
+.header__item1 {
   margin-right: 10px;
 }
-.Header__item1:hover {
+.header__item1:hover {
   cursor: pointer;
 }
 /* главная страница */
-.Main {
+.main {
   width: 100%;
   font-family: "Montserrat";
   color: #455b74;
