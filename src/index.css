@@ -17,41 +17,6 @@ code {
   margin: auto;
   position: relative;
 }
-
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  left: 0;
-}
-.header__container {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 30px;
-  box-shadow: 1px -1px 2px #c4c9dc, -1px 1px 2px #ffffff;
-}
-.header__logo {
-  color: #455b74;
-  font-family: "Montserrat";
-  font-weight: 700;
-  margin-left: 20px;
-  text-shadow: 2px -3px 2px #c4c9dc, -2px 3px 2px #ffffff;
-}
-.header__button {
-  margin-right: 30px;
-}
-.header__item1 {
-  margin-right: 10px;
-}
-.header__item1:hover {
-  cursor: pointer;
-}
 /* главная страница */
 .main {
   width: 100%;
@@ -63,37 +28,6 @@ code {
   position: absolute;
   top: 20%;
   left: 0;
-}
-
-button {
-  border: none;
-  color: #455b74;
-  padding: 0.5em 0.8em;
-  font-size: 18px;
-  border-radius: 50%;
-  border: 0.5px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px -3px 6px #c4c9dc, -6px 3px 6px #ffffff;
-}
-
-button:hover {
-  box-shadow: -6px 3px 6px #c4c9dc, 6px -3px 6px #ffffff;
-}
-
-button:active {
-  box-shadow: inset -6px 3px 6px #c4c9dc, inset 6px -3px 6px #ffffff;
-}
-
-input {
-  display: none;
-  font-family: "Montserrat";
-  color: #989898;
-  outline: none;
-  text-decoration: none;
-  border: none;
-  padding: 10px 5px;
-  box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;
-  border-radius: 30px;
 }
 .star {
   box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;

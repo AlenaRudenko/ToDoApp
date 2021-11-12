@@ -49,4 +49,35 @@
 /* избранное */
 .Main__fav {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.Editor {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  box-shadow: 1px -1px 1px #c4c9dc, -1px 1px 1px #ffffff;
+}
+.Trash {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  box-shadow: 1px -1px 1px #c4c9dc, -1px 1px 1px #ffffff;
+}
+.trash__container {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+.editor__container {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
 }
