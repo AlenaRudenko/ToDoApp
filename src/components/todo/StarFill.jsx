@@ -4,14 +4,14 @@ export const StarFill = () => {
       className="shadow"
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="25px"
-      height="25px"
+      width="15px"
+      height="15px"
       viewBox="0 0 1280.000000 1221.000000"
       preserveAspectRatio="xMidYMid meet">
       <g
         transform="translate(0.000000,1221.000000) scale(0.100000,-0.100000)"
         fill="#455B74"
-        stroke="none"
+        stroke="#455B74"
         strokeWidth="50%">
         <path
           d="M6307 12196 c-98 -36 -178 -122 -275 -295 -116 -207 -394 -714 -756

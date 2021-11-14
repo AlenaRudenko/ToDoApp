@@ -1,0 +1,36 @@
+/* кнопки избранного, мусорки, карандаша */
+
+button {
+  border: none;
+  color: #455b74;
+  border-radius: 50%;
+  border: 0.5px solid #e8e8e8;
+  transition: all 0.3s;
+}
+.button--small {
+  width: 25px;
+  height: 25px;
+  box-shadow: 1px -1px 1px #c4c9dc, -1px 1px 1px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button--small:hover {
+  box-shadow: -1px 1px 1px #c4c9dc, 1px -1px 1px #ffffff;
+}
+.button--small:active {
+  box-shadow: inset -1px 1px 1px #c4c9dc, inset 1px -1px 1px #ffffff;
+}
+
+.button--large {
+  padding: 0.5em 0.8em;
+  font-size: 18px;
+  box-shadow: 6px -3px 6px #c4c9dc, -6px 3px 6px #ffffff;
+}
+.button--large:hover {
+  box-shadow: -6px 3px 6px #c4c9dc, 6px -3px 6px #ffffff;
+}
+
+.button--large:active {
+  box-shadow: inset -6px 3px 6px #c4c9dc, inset 6px -3px 6px #ffffff;
+}

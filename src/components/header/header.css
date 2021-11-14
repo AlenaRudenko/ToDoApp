@@ -32,25 +32,9 @@
 .header__item1:hover {
   cursor: pointer;
 }
-button {
-  border: none;
-  color: #455b74;
-  padding: 0.5em 0.8em;
-  font-size: 18px;
-  border-radius: 50%;
-  border: 0.5px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px -3px 6px #c4c9dc, -6px 3px 6px #ffffff;
+.big__button {
+  margin-right: 50px;
 }
-
-button:hover {
-  box-shadow: -6px 3px 6px #c4c9dc, 6px -3px 6px #ffffff;
-}
-
-button:active {
-  box-shadow: inset -6px 3px 6px #c4c9dc, inset 6px -3px 6px #ffffff;
-}
-
 input {
   display: none;
   font-family: "Montserrat";
