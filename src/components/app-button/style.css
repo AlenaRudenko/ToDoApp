@@ -7,6 +7,16 @@ button {
   border: 0.5px solid #e8e8e8;
   transition: all 0.3s;
 }
+.shop__button--checked {
+  background-color: #98fb98;
+  box-shadow: inset -1px 1px 1px #c4c9dc, inset 1px -1px 1px #ffffff;
+}
+.shop__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
 .button--small {
   width: 25px;
   height: 25px;
