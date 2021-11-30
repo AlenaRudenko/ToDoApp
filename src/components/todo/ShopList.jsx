@@ -23,8 +23,18 @@ export const ShopList = (props) => {
         </div>
       </div>
       <div className="purshase__buttons">
-        <AppButton onClickButton={() => {}}>+</AppButton>
-        <AppButton>-</AppButton>
+        <AppButton
+          onClickButton={() => {
+            setCounter(counter + 1);
+          }}>
+          +
+        </AppButton>
+        <AppButton
+          onClickButton={() => {
+            counter > 1 && setCounter(counter - 1);
+          }}>
+          -
+        </AppButton>
         <AppButton
           onClickButton={() => {
             props.delPurshase(props.id);
