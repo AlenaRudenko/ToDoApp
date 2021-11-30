@@ -1,12 +1,12 @@
-export const ShopButton = ({ bought, onClickButton }) => {
+export const ShopButton = ({ isBought, onClickButton }) => {
   return (
     <button
       onClick={onClickButton}
       size={"small"}
       className={`shop__button ${
-        bought ? "shop__button--checked" : ""
+        isBought ? "shop__button--checked" : ""
       } button--small`}>
-      {bought && (
+      {isBought && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

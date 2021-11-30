@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { Header } from "./components/header/Header";
-import { ShopList } from "./components/todo/ShopList";
-import { ToDoItem } from "./components/todo/ToDoItem";
+import ShopList from "./components/todo/ShopList";
+import ToDoItem from "./components/todo/ToDoItem";
 const mock = [
   { text: "wake up", isChecked: true, isFavourite: false, id: "1" },
   { text: "do bed", isChecked: false, isFavourite: false, id: "2" },
