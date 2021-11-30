@@ -17,6 +17,17 @@ const shopArr = [
   { item: "банан", count: 6, isBuy: true, id: "no5" },
 ];
 
+class User {
+  constructor({ name = "Alf", age = 20 } = {}) {
+    this.name = name;
+    this.age = age;
+  }
+  name = "";
+  loshara = 0;
+}
+const user1 = new User({ name: "lols", age: 15 });
+const user2 = new User();
+console.log(user1, user2);
 function App() {
   const [todos, setTodos] = useState(mock);
   const [purshase, setPurshase] = useState(shopArr);
@@ -35,10 +46,10 @@ function App() {
     );
   };
   return (
-    <div className="app">
-      <div className="container">
+    <div className='app'>
+      <div className='container'>
         <Header />
-        <div className="main">
+        <div className='main'>
           {todos.map((item) => {
             return (
               <ToDoItem

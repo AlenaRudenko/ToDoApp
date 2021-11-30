@@ -7,27 +7,27 @@ class ShopList extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isBought: false };
-    this.onClickButton = this.onClickButton.bind(this);
   }
-  onClick = { onClickButton };
   render() {
     return (
-      <div className="Main__item Main__item--purshase">
-        <div className="main__container">
+      <div className='Main__item Main__item--purshase'>
+        <div className='main__container'>
           <ShopButton
+            isBought={this.state.isBought}
             onClickButton={() => {
-              this.state.isBought ? this.setState(false) : this.setState(false);
+              this.setState({ isBought: !this.state.isBought });
             }}
           />
           <div className={`Main__task`}>{this.props.item}</div>
         </div>
-        <div className="purshase__buttons">
+        <div className='purshase__buttons'>
           <AppButton onClickButton={() => {}}>+</AppButton>
           <AppButton onClickButton={() => {}}>-</AppButton>
           <AppButton
             onClickButton={() => {
               this.props.delPurshase(this.props.id);
-            }}>
+            }}
+          >
             <Trash />
           </AppButton>
         </div>
