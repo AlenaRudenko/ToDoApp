@@ -1,5 +1,5 @@
 import { AppButton } from "../app-button/AppButton";
-import { ShopButton } from "../app-button/ShopButton";
+import ShopButton from "../app-button/ShopButton";
 import { Trash } from "./Trash";
 import React from "react";
 
@@ -10,8 +10,8 @@ class ShopList extends React.Component {
   }
   render() {
     return (
-      <div className='Main__item Main__item--purshase'>
-        <div className='main__container'>
+      <div className="Main__item Main__item--purshase">
+        <div className="main__container">
           <ShopButton
             isBought={this.state.isBought}
             onClickButton={() => {
@@ -20,14 +20,13 @@ class ShopList extends React.Component {
           />
           <div className={`Main__task`}>{this.props.item}</div>
         </div>
-        <div className='purshase__buttons'>
+        <div className="purshase__buttons">
           <AppButton onClickButton={() => {}}>+</AppButton>
           <AppButton onClickButton={() => {}}>-</AppButton>
           <AppButton
             onClickButton={() => {
               this.props.delPurshase(this.props.id);
-            }}
-          >
+            }}>
             <Trash />
           </AppButton>
         </div>
