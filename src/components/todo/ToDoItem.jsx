@@ -6,6 +6,7 @@ import { CheckedButton } from "./CheckedButton";
 import react from "react";
 import { StarFill } from "./StarFill";
 import StarOutline from "./StarOutline";
+import EditWindow from "./EditWindow";
 
 class ToDoItem extends react.Component {
   constructor(props) {
@@ -13,12 +14,14 @@ class ToDoItem extends react.Component {
     this.state = {
       isChecked: props.isChecked,
       isFavourite: props.isFavourite,
+      isPushEdit: props.isPushEdit,
+      isExit: props.isExit,
     };
   }
   render() {
     return (
-      <div className='Main__item'>
-        <div className='Main__group'>
+      <div className="Main__item">
+        <div className="Main__group">
           <CheckedButton
             isChecked={this.state.isChecked}
             onClickButton={() => {
@@ -30,24 +33,28 @@ class ToDoItem extends react.Component {
               "Твоя возможность быть продуктивнее ! Поставь задачу :)"}
           </div>
         </div>
-        <div className='Main__fav'>
+        <div className="Main__fav">
           <AppButton
             onClickButton={() => {
               this.setState({ isFavourite: !this.state.isFavourite });
-            }}
-          >
+            }}>
             {this.state.isFavourite ? <StarFill /> : <StarOutline />}
           </AppButton>
           <AppButton
             onClickButton={() => {
               this.props.delTodo(this.props.id);
-            }}
-          >
+            }}>
             <Trash />
           </AppButton>
-          <AppButton>
+          <AppButton
+            onClickButton={() => {
+              this.setState({ isPushEdit: !this.state.isPushEdit });
+              console.log(this.state.isPushEdit);
+            }}
+            isPushEdit={this.state.isPushEdit}>
             <Pencil />
           </AppButton>
+          <EditWindow isPushEdit={this.state.isPushEdit} />
         </div>
       </div>
     );

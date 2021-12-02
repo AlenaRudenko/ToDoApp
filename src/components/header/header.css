@@ -46,3 +46,6 @@ input {
   box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;
   border-radius: 30px;
 }
+.header__placesearch--active {
+  display: block;
+}
