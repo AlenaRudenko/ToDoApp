@@ -1,4 +1,15 @@
 /* группа таска */
+.Main__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Main__item--active {
+  border-radius: 10px !important;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
 .Main__item {
   width: 80%;
   display: flex;
@@ -9,6 +20,37 @@
   border-radius: 30px;
   background: #eaecf0;
   box-shadow: 4px -3px 4px #c4c9dc, -4px 3px 4px #ffffff;
+}
+.Main__item__firstcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Main__item__secondcontainer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.Main__inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Main__input {
+  margin-right: 10px;
+}
+.toDoEdit {
+  font-family: "Montserrat";
+  color: #989898;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  padding: 10px 5px;
+  box-shadow: inset -2px 2px 2px #c4c9dc, inset 2px -2px 2px #ffffff;
+  border-radius: 10px;
 }
 /* один таск */
 .Main__group {
