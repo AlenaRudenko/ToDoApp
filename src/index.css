@@ -86,9 +86,6 @@ code {
   display: block;
 }
 .header__search {
-  display: none;
-}
-.header__search--active {
   display: block;
 }
 .header__searchContainer {
