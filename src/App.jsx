@@ -9,28 +9,24 @@ const mock = [
     isChecked: true,
     isFavourite: false,
     id: "1",
-    isPushEdit: false,
   },
   {
     text: "do bed",
     isChecked: false,
     isFavourite: false,
     id: "2",
-    isPushEdit: false,
   },
   {
     text: "feed cat",
     isChecked: false,
     isFavourite: true,
     id: "3",
-    isPushEdit: false,
   },
   {
     text: "feed cat",
     isChecked: false,
     isFavourite: true,
     id: "4",
-    isPushEdit: false,
   },
 ];
 
@@ -39,7 +35,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       todos: mock,
-      isPushedPlus: false,
       todoValue: "",
       isCreate: false,
     };
@@ -166,7 +161,6 @@ class App extends React.Component {
                   isChecked={item.isChecked}
                   isFavourite={item.isFavourite}
                   id={item.id}
-                  isPushEdit={item.isPushEdit}
                   delTodo={this.deleteTodo}
                   changeChecked={this.changeChecked}
                   changeTodoValue={this.changeTodoValue}

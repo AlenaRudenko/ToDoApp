@@ -14,8 +14,6 @@ class ToDoItem extends react.Component {
       isFavourite: props.isFavourite,
       isEdit: false,
       isSent: false,
-      value: "",
-      textArea: props.text,
     };
   }
   handleChange = (event) => {
