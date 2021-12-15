@@ -23,13 +23,14 @@ const mock = [
     id: "3",
   },
   {
-    text: "feed cat",
+    text: "do honework",
     isChecked: false,
     isFavourite: true,
     id: "4",
   },
 ];
-
+// TODO:change default changed start name input
+//TODO: Make header component
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -93,47 +94,54 @@ class App extends React.Component {
   render() {
     console.log(this.state.todos);
     return (
-      <div className="app">
-        <div className="container">
-          <div className="header">
-            <div className="header__container">
-              <h1 className="header__logo">ToDo App</h1>
+      <div className='app'>
+        <div className='container'>
+          <div className='header'>
+            <div className='header__container'>
+              <h1 className='header__logo'>ToDo App</h1>
               {this.state.isPushedPlus && (
-                <div className="header__search--active">
-                  <div className="header__searchContainer">
+                <div className='header__search--active'>
+                  <div className='header__searchContainer'>
                     <input
                       onChange={this.handleChange}
-                      type="text"
-                      className={"header__placesearch"}></input>
+                      type='text'
+                      className={"header__placesearch"}
+                    ></input>
                     <AppButton
                       onClickButton={() => {
-                        this.setState({ todoValue: this.state.todoValue });
                         console.log(this.state.todoValue);
-
-                        this.state.todos.push({
+                        const newToDo = {
                           text: this.state.todoValue,
                           isChecked: false,
                           isFavourite: false,
                           id: `${this.state.todos.length + 1}`,
                           isPushEdit: false,
-                        });
+                        };
 
-                        console.log(this.state.todos);
-                        this.setState({ isCreate: !this.state.isCreate });
-                        this.setState({
-                          isPushedPlus: !this.state.isPushedPlus,
-                        });
-                      }}>
+                        this.setState(({ todoValue, isPushedPlus, todos }) => ({
+                          todoValue: todoValue,
+                          isPushedPlus: !isPushedPlus,
+                          todos: [newToDo, ...todos],
+                        }));
+                        // this.setState({
+                        //   todoValue: this.state.todoValue,
+                        //   isPushedPlus: !this.state.isPushedPlus,
+                        //   isCreate: !this.state.isCreate,
+                        //   todos: [...this.state.todos, newToDo],
+                        // });
+                      }}
+                    >
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-send-fill"
-                        viewBox="0 0 16 16">
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='16'
+                        height='16'
+                        fill='currentColor'
+                        class='bi bi-send-fill'
+                        viewBox='0 0 16 16'
+                      >
                         <path
-                          fill-rule="evenodd"
-                          d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z"
+                          fill-rule='evenodd'
+                          d='M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z'
                         />
                       </svg>
                     </AppButton>
@@ -141,22 +149,24 @@ class App extends React.Component {
                 </div>
               )}
 
-              <div class="big__button">
+              <div class='big__button'>
                 <AppButton
                   isPushedPlus={this.state.isPushedPlus}
                   onClickButton={() => {
                     this.setState({ isPushedPlus: !this.state.isPushedPlus });
                   }}
-                  size={"large"}>
+                  size={"large"}
+                >
                   +
                 </AppButton>
               </div>
             </div>
           </div>
-          <div className="main">
+          <div className='main'>
             {this.state.todos.map((item) => {
               return (
                 <ToDoItem
+                  key={item.id}
                   text={item.text}
                   isChecked={item.isChecked}
                   isFavourite={item.isFavourite}
