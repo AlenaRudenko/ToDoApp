@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-import { AppButton } from "./components/app-button/AppButton";
-import Header from "./components/header/Header";
+import MainHeader from "./components/header/MainHeader";
 import ToDoItem from "./components/todo/ToDoItem";
 
 const mock = [
@@ -71,19 +70,15 @@ class App extends React.Component {
       ),
     });
   };
-  createTodo = () => {
+  createTodo = (value) => {
     const newTodo = {
-      text: this.state.todoValue,
+      text: value,
       isChecked: false,
       isFavourite: false,
       id: `${this.state.todos.length + 1}`,
       isPushEdit: false,
     };
-    this.setState(({ todoValue, isPushedPlus, todos }) => ({
-      todoValue: todoValue,
-      isPushedPlus: !isPushedPlus,
-      todos: [newTodo, ...todos],
-    }));
+    this.setState({ todos: [newTodo, ...this.state.todos] });
   };
   changeTodoValue = (id, text) => {
     this.setState({
@@ -108,7 +103,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <div className="container">
-          <Header />
+          <MainHeader createTodo={this.createTodo} />
           <div className="main">
             {this.state.todos.map((item) => {
               return (

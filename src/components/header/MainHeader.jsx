@@ -1,11 +1,17 @@
-import React from "React";
+import React from "react";
 import { AppButton } from "../app-button/AppButton";
 
-class Header extends React.Component() {
+class MainHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isPushedPlus: false,
+      todoValue: "",
+    };
   }
+  handleChange = (value) => {
+    this.setState({ todoValue: value });
+  };
   render() {
     return (
       <div className="header">
@@ -15,25 +21,15 @@ class Header extends React.Component() {
             <div className="header__search--active">
               <div className="header__searchContainer">
                 <input
-                  onChange={this.handleChange}
+                  onChange={(e) => {
+                    this.handleChange(e.target.value);
+                  }}
                   type="text"
                   className={"header__placesearch"}></input>
                 <AppButton
                   onClickButton={() => {
-                    console.log(this.state.todoValue);
-                    const newToDo = {
-                      text: this.state.todoValue,
-                      isChecked: false,
-                      isFavourite: false,
-                      id: `${this.state.todos.length + 1}`,
-                      isPushEdit: false,
-                    };
-
-                    this.setState(({ todoValue, isPushedPlus, todos }) => ({
-                      todoValue: todoValue,
-                      isPushedPlus: !isPushedPlus,
-                      todos: [newToDo, ...todos],
-                    }));
+                    this.props.createTodo(this.state.todoValue);
+                    this.setState({ isPushedPlus: !this.state.isPushedPlus });
                   }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,4 +63,4 @@ class Header extends React.Component() {
     );
   }
 }
-export default Header;
+export default MainHeader;
