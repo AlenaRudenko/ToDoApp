@@ -3,43 +3,35 @@ import "./App.css";
 import MainHeader from "./components/header/MainHeader";
 import ToDoItem from "./components/todo/ToDoItem";
 
-const mock = [
-  {
-    text: "wake up",
-    isChecked: true,
-    isFavourite: false,
-    id: "1",
-  },
-  {
-    text: "do bed",
-    isChecked: false,
-    isFavourite: false,
-    id: "2",
-  },
-  {
-    text: "feed cat",
-    isChecked: false,
-    isFavourite: true,
-    id: "3",
-  },
-  {
-    text: "do honework",
-    isChecked: false,
-    isFavourite: true,
-    id: "4",
-  },
-];
-// TODO:change default changed start name input
-//TODO: Make header component
+// TODO:новое поле тудушки createdat
+// TODO:изучить объект date js
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: mock,
+      todos: [],
       todoValue: "",
       isCreate: false,
     };
   }
+
+  componentDidMount() {
+    const todoArray = localStorage.getItem("todos");
+    if (todoArray) {
+      this.setState({ todos: JSON.parse(todoArray) });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(JSON.stringify(prevState.todos));
+    console.log(JSON.stringify(this.state.todos));
+    if (JSON.stringify(prevState.todos) !== JSON.stringify(this.state.todos)) {
+      localStorage.setItem("todos", JSON.stringify(this.state.todos));
+      console.log("стал", this.state.todos, "был", prevState.todos);
+    }
+  }
+
   deleteTodo = (id) => {
     this.setState({
       todos: this.state.todos.filter((item) => {
@@ -70,6 +62,7 @@ class App extends React.Component {
       ),
     });
   };
+
   createTodo = (value) => {
     const newTodo = {
       text: value,
@@ -80,6 +73,7 @@ class App extends React.Component {
     };
     this.setState({ todos: [newTodo, ...this.state.todos] });
   };
+
   changeTodoValue = (id, text) => {
     this.setState({
       todos: this.state.todos.map((item) =>
@@ -87,6 +81,7 @@ class App extends React.Component {
       ),
     });
   };
+
   changeChecked = (id, newIsCheckedValue) => {
     this.setState({
       todos: this.state.todos.map((item) => {
@@ -98,13 +93,13 @@ class App extends React.Component {
       }),
     });
   };
+
   render() {
-    console.log(this.state.todos);
     return (
-      <div className="app">
-        <div className="container">
+      <div className='app'>
+        <div className='container'>
           <MainHeader createTodo={this.createTodo} />
-          <div className="main">
+          <div className='main'>
             {this.state.todos.map((item) => {
               return (
                 <ToDoItem
@@ -121,7 +116,6 @@ class App extends React.Component {
                 />
               );
             })}
-            ;
           </div>
         </div>
       </div>
