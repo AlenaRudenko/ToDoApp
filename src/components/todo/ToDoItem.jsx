@@ -19,7 +19,7 @@ class ToDoItem extends react.PureComponent {
     console.log("componentDidMount", this.props.id);
   }
   componentDidUpdate(prevprops) {
-    console.log("componentDidUpdate", this.props.text, prevprops.text);
+    // console.log("componentDidUpdate", this.props.text, prevprops.text);
   }
   // shouldComponentUpdate() {
   //   return false;
@@ -27,11 +27,10 @@ class ToDoItem extends react.PureComponent {
   componentWillUnmount() {
     console.log("componentWillUnmount", this.props.text);
   }
-  onTodoChange = (value) => {
+  onTodoChange = (value) =>
     this.setState({
       valueInput: value,
     });
-  };
   render() {
     return (
       <div className="Main__content">
@@ -88,11 +87,15 @@ class ToDoItem extends react.PureComponent {
                 </div>
                 <AppButton
                   onClickButton={() => {
-                    this.props.changeTodoValue(
-                      this.props.id,
-                      this.state.valueInput
-                    );
-                    this.setState({ isEdit: !this.state.isEdit });
+                    if (this.state.valueInput) {
+                      this.props.changeTodoValue(
+                        this.props.id,
+                        this.state.valueInput
+                      );
+                      this.setState({ isEdit: !this.state.isEdit });
+                    } else {
+                      this.props.delTodo(this.props.id);
+                    }
                   }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +115,8 @@ class ToDoItem extends react.PureComponent {
                 <AppButton>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     class="bi bi-tags-fill"
                     viewBox="0 0 16 16">
